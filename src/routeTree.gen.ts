@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiDetectionRouteImport } from './routes/ai-detection'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as ArchitectureRouteImport } from './routes/architecture'
+import { Route as BehaviorRouteImport } from './routes/behavior'
+import { Route as ComplianceRouteImport } from './routes/compliance'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EndpointsRouteImport } from './routes/endpoints'
+import { Route as IncidentsRouteImport } from './routes/incidents'
+import { Route as NetworkRouteImport } from './routes/network'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ThreatIntelligenceRouteImport } from './routes/threat-intelligence'
+import { Route as VulnerabilitiesRouteImport } from './routes/vulnerabilities'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiDetectionRoute = AiDetectionRouteImport.update({
+  id: '/ai-detection',
+  path: '/ai-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchitectureRoute = ArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BehaviorRoute = BehaviorRouteImport.update({
+  id: '/behavior',
+  path: '/behavior',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplianceRoute = ComplianceRouteImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndpointsRoute = EndpointsRouteImport.update({
+  id: '/endpoints',
+  path: '/endpoints',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IncidentsRoute = IncidentsRouteImport.update({
+  id: '/incidents',
+  path: '/incidents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkRoute = NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThreatIntelligenceRoute = ThreatIntelligenceRouteImport.update({
+  id: '/threat-intelligence',
+  path: '/threat-intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VulnerabilitiesRoute = VulnerabilitiesRouteImport.update({
+  id: '/vulnerabilities',
+  path: '/vulnerabilities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/analytics': typeof AnalyticsRoute
+  '/architecture': typeof ArchitectureRoute
+  '/behavior': typeof BehaviorRoute
+  '/compliance': typeof ComplianceRoute
+  '/dashboard': typeof DashboardRoute
+  '/endpoints': typeof EndpointsRoute
+  '/incidents': typeof IncidentsRoute
+  '/network': typeof NetworkRoute
+  '/settings': typeof SettingsRoute
+  '/threat-intelligence': typeof ThreatIntelligenceRoute
+  '/vulnerabilities': typeof VulnerabilitiesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/analytics': typeof AnalyticsRoute
+  '/architecture': typeof ArchitectureRoute
+  '/behavior': typeof BehaviorRoute
+  '/compliance': typeof ComplianceRoute
+  '/dashboard': typeof DashboardRoute
+  '/endpoints': typeof EndpointsRoute
+  '/incidents': typeof IncidentsRoute
+  '/network': typeof NetworkRoute
+  '/settings': typeof SettingsRoute
+  '/threat-intelligence': typeof ThreatIntelligenceRoute
+  '/vulnerabilities': typeof VulnerabilitiesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/analytics': typeof AnalyticsRoute
+  '/architecture': typeof ArchitectureRoute
+  '/behavior': typeof BehaviorRoute
+  '/compliance': typeof ComplianceRoute
+  '/dashboard': typeof DashboardRoute
+  '/endpoints': typeof EndpointsRoute
+  '/incidents': typeof IncidentsRoute
+  '/network': typeof NetworkRoute
+  '/settings': typeof SettingsRoute
+  '/threat-intelligence': typeof ThreatIntelligenceRoute
+  '/vulnerabilities': typeof VulnerabilitiesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai-detection'
+    | '/analytics'
+    | '/architecture'
+    | '/behavior'
+    | '/compliance'
+    | '/dashboard'
+    | '/endpoints'
+    | '/incidents'
+    | '/network'
+    | '/settings'
+    | '/threat-intelligence'
+    | '/vulnerabilities'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai-detection'
+    | '/analytics'
+    | '/architecture'
+    | '/behavior'
+    | '/compliance'
+    | '/dashboard'
+    | '/endpoints'
+    | '/incidents'
+    | '/network'
+    | '/settings'
+    | '/threat-intelligence'
+    | '/vulnerabilities'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai-detection'
+    | '/analytics'
+    | '/architecture'
+    | '/behavior'
+    | '/compliance'
+    | '/dashboard'
+    | '/endpoints'
+    | '/incidents'
+    | '/network'
+    | '/settings'
+    | '/threat-intelligence'
+    | '/vulnerabilities'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiDetectionRoute: typeof AiDetectionRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  ArchitectureRoute: typeof ArchitectureRoute
+  BehaviorRoute: typeof BehaviorRoute
+  ComplianceRoute: typeof ComplianceRoute
+  DashboardRoute: typeof DashboardRoute
+  EndpointsRoute: typeof EndpointsRoute
+  IncidentsRoute: typeof IncidentsRoute
+  NetworkRoute: typeof NetworkRoute
+  SettingsRoute: typeof SettingsRoute
+  ThreatIntelligenceRoute: typeof ThreatIntelligenceRoute
+  VulnerabilitiesRoute: typeof VulnerabilitiesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +208,108 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-detection': {
+      id: '/ai-detection'
+      path: '/ai-detection'
+      fullPath: '/ai-detection'
+      preLoaderRoute: typeof AiDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/architecture': {
+      id: '/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof ArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/behavior': {
+      id: '/behavior'
+      path: '/behavior'
+      fullPath: '/behavior'
+      preLoaderRoute: typeof BehaviorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compliance': {
+      id: '/compliance'
+      path: '/compliance'
+      fullPath: '/compliance'
+      preLoaderRoute: typeof ComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/endpoints': {
+      id: '/endpoints'
+      path: '/endpoints'
+      fullPath: '/endpoints'
+      preLoaderRoute: typeof EndpointsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/incidents': {
+      id: '/incidents'
+      path: '/incidents'
+      fullPath: '/incidents'
+      preLoaderRoute: typeof IncidentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network': {
+      id: '/network'
+      path: '/network'
+      fullPath: '/network'
+      preLoaderRoute: typeof NetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/threat-intelligence': {
+      id: '/threat-intelligence'
+      path: '/threat-intelligence'
+      fullPath: '/threat-intelligence'
+      preLoaderRoute: typeof ThreatIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vulnerabilities': {
+      id: '/vulnerabilities'
+      path: '/vulnerabilities'
+      fullPath: '/vulnerabilities'
+      preLoaderRoute: typeof VulnerabilitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiDetectionRoute: AiDetectionRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  ArchitectureRoute: ArchitectureRoute,
+  BehaviorRoute: BehaviorRoute,
+  ComplianceRoute: ComplianceRoute,
+  DashboardRoute: DashboardRoute,
+  EndpointsRoute: EndpointsRoute,
+  IncidentsRoute: IncidentsRoute,
+  NetworkRoute: NetworkRoute,
+  SettingsRoute: SettingsRoute,
+  ThreatIntelligenceRoute: ThreatIntelligenceRoute,
+  VulnerabilitiesRoute: VulnerabilitiesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
