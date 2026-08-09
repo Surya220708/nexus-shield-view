@@ -22,6 +22,7 @@ import {
   RiskRing,
   SeverityBadge,
   StatusDot,
+  toneText,
   type Tone,
 } from "@/components/cyber/primitives";
 import { EVENT_TIMELINE, RECENT_THREATS, RISK_BREAKDOWN, SECURITY_METRICS } from "@/lib/mock-data";
@@ -143,9 +144,9 @@ function DashboardPage() {
                   <p className="font-mono text-[10px] tracking-[0.16em] text-muted-foreground uppercase">
                     {m.label}
                   </p>
-                  <m.icon className={cn("h-4 w-4", `text-${m.tone}`)} />
+                  <m.icon className={cn("h-4 w-4", toneText[m.tone])} />
                 </div>
-                <p className={cn("mt-3 font-display text-3xl font-semibold", `text-${m.tone}`)}>
+                <p className={cn("mt-3 font-display text-3xl font-semibold", toneText[m.tone])}>
                   {m.value}
                 </p>
               </GlassCard>
